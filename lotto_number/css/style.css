@@ -39,7 +39,7 @@ body {
   align-items: center;
   gap: 30px;
 
-  width: 400px;
+  width: 700px;
   padding: 50px;
   border-radius: 50px;
   background-color: #bae5ff;
@@ -52,7 +52,6 @@ body {
 }
 
 .lottoTitle {
-  background-color: white;
   padding: 10px;
   border-radius: 20px;
 
@@ -69,6 +68,8 @@ body {
   background-color: white;
 
   margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 ul {
