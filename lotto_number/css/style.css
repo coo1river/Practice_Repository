@@ -70,7 +70,7 @@ body {
   color: rgb(43, 43, 43);
 }
 
-.lottoBtn {
+.btn {
   cursor: pointer;
   background-color: rgb(43, 92, 253);
   color: white;
@@ -80,6 +80,12 @@ body {
   padding: 10px 15px;
   border-radius: 30px;
 }
+
+/* .resetBtn {
+  position: absolute;
+  top: 203px;
+  opacity: 60%;
+} */
 
 ul {
   display: flex;
