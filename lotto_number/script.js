@@ -1,5 +1,5 @@
-const button = document.querySelector(".lottoBtn");
-const list = document.querySelector(".btnList");
+const button = document.querySelector(".lotto_btn");
+const list = document.querySelector(".btn_list");
 
 const createNumber = function () {
   let lottoArr = [];
