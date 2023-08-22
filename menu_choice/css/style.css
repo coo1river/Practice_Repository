@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body,
+h1,
+h2,
+p,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: unset;
+  outline: none;
+  background-color: unset;
+  font-family: unset;
+}
+
+body {
+  font-family: "SUITE-Regular";
+}
+
+.menu_content {
+  width: 800px;
+  height: 290px;
+  margin: 100px auto;
+
+  background-color: rgb(252, 124, 101);
+  color: white;
+
+  border: 2px solid tomato;
+  border-radius: 40px;
+  line-height: 100px;
+}
+
+.menu_content h1 {
+  font-family: "Cafe24Ssurround";
+  text-align: center;
+  font-size: 40px;
+}
+
+.menu_content form {
+  text-align: center;
+}
+
+.menu_content input {
+  width: 195px;
+  height: 40px;
+  padding: 15px 30px;
+
+  background-color: white;
+  border: 1px;
+  border-radius: 40px;
+  border: 2px solid tomato;
+
+  font-size: 20px;
+}
+
+.btn_add {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid white;
+
+  background-color: rgb(250, 154, 137);
+  color: white;
+  font-size: 15px;
+}
+
+.btn_add:hover {
+  cursor: pointer;
+}
+
+.btn_add:active {
+  border: 2px solid tomato;
+  background-color: tomato;
+
+  box-shadow: inset 1px 1px 0 rgba(110, 110, 110, 0.418);
+}
