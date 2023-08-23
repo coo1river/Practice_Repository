@@ -1,5 +1,5 @@
 const button = document.querySelector(".lotto_btn");
-const list = document.querySelector(".btn_list");
+const list = document.querySelector(".num_list");
 
 const createNumber = function () {
   let lottoArr = [];
@@ -17,6 +17,7 @@ let btnCount = 0;
 button.addEventListener("click", () => {
   if (list.querySelectorAll("li").length === 0) {
     lottoArr = createNumber();
+    console.log(lottoArr);
   }
   const createBall = document.createElement("li");
   createBall.textContent = lottoArr[btnCount];

@@ -88,7 +88,7 @@ ul {
   gap: 10px;
 }
 
-ul li {
+.num_list li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,26 +103,26 @@ ul li {
   border: 2px solid rgba(66, 66, 66, 0.459);
 }
 
-ul :nth-child(1) {
+.num_list li:nth-child(1) {
   background-color: tomato;
 }
 
-ul :nth-child(2) {
+.num_list li:nth-child(2) {
   background-color: orange;
 }
 
-ul :nth-child(3) {
+.num_list li:nth-child(3) {
   background-color: darkolivegreen;
 }
 
-ul :nth-child(4) {
+.num_list li:nth-child(4) {
   background-color: deepskyblue;
 }
 
-ul :nth-child(5) {
+.num_list li:nth-child(5) {
   background-color: royalblue;
 }
 
-ul :nth-child(6) {
+.num_list li:nth-child(6) {
   background-color: slateblue;
 }
