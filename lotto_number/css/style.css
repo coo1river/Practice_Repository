@@ -38,23 +38,22 @@ body {
 }
 
 .lotto_number {
+  min-width: 400px;
+  height: 290px;
+
+  width: fit-content;
+  margin: 300px auto;
+  padding: 50px 150px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 
-  width: 500px;
-  height: 300px;
-  padding: 50px;
   border: 2px solid rgba(43, 92, 253, 0.377);
   border-radius: 50px;
   background-color: white;
   box-shadow: 3px 3px 5px rgba(58, 58, 58, 0.151);
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .lotto_title {

@@ -1,45 +1,29 @@
 const button = document.querySelector(".lotto_btn");
 const list = document.querySelector(".num_list");
 
+let lottoArr = [];
 const createNumber = function () {
-  let lottoArr = [];
-  while (lottoArr.length < 6) {
+  let current_length = lottoArr.length + 1;
+  while (lottoArr.length < current_length) {
     const randomNum = parseInt(Math.random() * 45 + 1);
     if (!lottoArr.includes(randomNum)) {
       lottoArr.push(randomNum);
     }
   }
-  return lottoArr;
 };
 
-let lottoArr;
-let btnCount = 0;
-button.addEventListener("click", () => {
-  if (list.querySelectorAll("li").length === 0) {
-    lottoArr = createNumber();
+const push = button.addEventListener("click", () => {
+  button.textContent = "PUSH";
+  if (lottoArr.length < 6) {
+    createNumber();
     console.log(lottoArr);
-  }
-  const createBall = document.createElement("li");
-  createBall.textContent = lottoArr[btnCount];
-  list.appendChild(createBall);
-  btnCount++;
-
-  if (list.querySelectorAll("li").length === 6) {
+    console.log(lottoArr[lottoArr.length - 1]);
+    const createBall = document.createElement("li");
+    createBall.textContent = lottoArr[lottoArr.length - 1];
+    list.appendChild(createBall);
+  } else if (lottoArr.length === 6) {
     button.textContent = "RESET";
-    button.classList.add("reset");
-
-    const reset = document.querySelector(".reset");
-
-    const fun = () => {
-      while (list.firstChild) {
-        list.firstChild.remove();
-      }
-
-      button.textContent = "PUSH";
-      button.classList.remove("reset");
-      btnCount = 0;
-      reset.removeEventListener("click", fun);
-    };
-    reset.addEventListener("click", fun);
+    lottoArr.length = 0;
+    list.innerHTML = "";
   }
 });
