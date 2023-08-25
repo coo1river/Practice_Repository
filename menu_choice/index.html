@@ -11,12 +11,21 @@
 
 <body>
   <article class="menu_content">
-    <h1>오늘의 메뉴 고르기</h1>
-    <form action="">
-      <input placeholder="🥪메뉴를 입력하세요🍜">
-      <button class="btn_add">먹고 싶어!</button>
-    </form>
+    <div class="menu_choice">
+      <h1>오늘의 메뉴 고르기</h1>
+      <input class="menu_add" placeholder="🥪메뉴를 입력하세요🍜" onfocus="this.placeholder = ''"
+        onblur="this.placeholder = '🥪메뉴를 입력하세요🍜'">
+      <button type="button" class="btn_add">먹고 싶어!</button>
+    </div>
+
+    <div>
+      <ul class="menu_list">
+      </ul>
+      <button type="button" class="btn_choice">뭐 먹을까?</button>
+    </div>
   </article>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

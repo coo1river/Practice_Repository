@@ -19,7 +19,9 @@ h1,
 h2,
 p,
 input,
-button {
+button,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -32,13 +34,16 @@ button {
   font-family: unset;
 }
 
+li::marker {
+  content: "✅";
+}
+
 body {
   font-family: "SUITE-Regular";
 }
 
 .menu_content {
   width: 800px;
-  height: 290px;
   margin: 100px auto;
 
   background-color: rgb(252, 124, 101);
@@ -49,17 +54,17 @@ body {
   line-height: 100px;
 }
 
-.menu_content h1 {
+.menu_choice h1 {
   font-family: "Cafe24Ssurround";
   text-align: center;
   font-size: 40px;
 }
 
-.menu_content form {
+.menu_choice {
   text-align: center;
 }
 
-.menu_content input {
+.menu_add {
   width: 195px;
   height: 40px;
   padding: 15px 30px;
@@ -72,7 +77,8 @@ body {
   font-size: 20px;
 }
 
-.btn_add {
+.btn_add,
+.btn_choice {
   display: block;
   margin: 10px auto;
   padding: 10px;
@@ -84,13 +90,32 @@ body {
   font-size: 15px;
 }
 
-.btn_add:hover {
+.btn_add:hover,
+.btn_choice {
   cursor: pointer;
 }
 
-.btn_add:active {
+.btn_add:active,
+.btn_choice:active {
   border: 2px solid tomato;
   background-color: tomato;
 
   box-shadow: inset 1px 1px 0 rgba(110, 110, 110, 0.418);
+}
+
+.menu_list {
+  margin: 50px;
+  padding: 30px;
+  padding-left: 315px;
+
+  border: 2px solid tomato;
+  border-radius: 30px;
+  font-size: 20px;
+  line-height: 50px;
+  background-color: white;
+  color: rgb(46, 46, 46);
+}
+
+.menu_list li {
+  padding-left: 10px;
 }
