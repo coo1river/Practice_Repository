@@ -14,10 +14,9 @@ const createNumber = function () {
 
 const push = button.addEventListener("click", () => {
   button.textContent = "PUSH";
+  list.style.display = "flex";
   if (lottoArr.length < 6) {
     createNumber();
-    console.log(lottoArr);
-    console.log(lottoArr[lottoArr.length - 1]);
     const createBall = document.createElement("li");
     createBall.textContent = lottoArr[lottoArr.length - 1];
     list.appendChild(createBall);

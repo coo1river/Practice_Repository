@@ -39,10 +39,9 @@ body {
 
 .lotto_number {
   min-width: 400px;
-  height: 290px;
 
   width: fit-content;
-  margin: 300px auto;
+  margin: 250px auto;
   padding: 50px 150px;
 
   display: flex;
@@ -82,7 +81,7 @@ body {
 }
 
 ul {
-  display: flex;
+  display: none;
   padding: 5px;
   gap: 10px;
 }
