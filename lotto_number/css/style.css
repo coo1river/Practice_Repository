@@ -80,7 +80,7 @@ body {
   border-radius: 30px;
 }
 
-ul {
+.num_list {
   display: none;
   padding: 5px;
   gap: 10px;

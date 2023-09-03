@@ -1,7 +1,7 @@
-const button = document.querySelector(".lotto_btn");
+const pushBtn = document.querySelector(".lotto_btn");
 const list = document.querySelector(".num_list");
 
-let lottoArr = [];
+const lottoArr = [];
 const createNumber = function () {
   let current_length = lottoArr.length + 1;
   while (lottoArr.length < current_length) {
@@ -12,8 +12,14 @@ const createNumber = function () {
   }
 };
 
-const push = button.addEventListener("click", () => {
-  button.textContent = "PUSH";
+const resetNumber = () => {
+  if (lottoArr.length === 6) {
+    pushBtn.textContent = "RESET";
+  }
+};
+
+const pushNumber = () => {
+  pushBtn.textContent = "PUSH";
   list.style.display = "flex";
 
   if (lottoArr.length < 6) {
@@ -21,9 +27,16 @@ const push = button.addEventListener("click", () => {
     const createBall = document.createElement("li");
     createBall.textContent = lottoArr[lottoArr.length - 1];
     list.appendChild(createBall);
-  } else if (lottoArr.length === 6) {
-    button.textContent = "RESET";
-    lottoArr.length = 0;
-    list.innerHTML = "";
+  } else {
+    const resetConfirm = confirm("리셋하시겠습니까?");
+    if (resetConfirm === true) {
+      lottoArr.length = 0;
+      list.innerHTML = "";
+    }
   }
+};
+
+pushBtn.addEventListener("click", () => {
+  pushNumber();
+  resetNumber();
 });
