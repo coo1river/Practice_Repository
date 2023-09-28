@@ -12,10 +12,12 @@ export function decrement() {
   return { type: DECREMENT };
 }
 
+// 초기 값 설정
 const initialState = {
   count: 0,
 };
 
+// 리듀서
 export default function counterReducer(state = initialState, action) {
   switch (action.type) {
     case INCREMENT:

@@ -6,7 +6,7 @@ function App() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div style={{ color: "skyblue" }}>
       <h1>카운터</h1>
       <p>카운트: {count}</p>
       <button onClick={() => dispatch(increment())}>증가</button>
