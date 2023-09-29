@@ -29,8 +29,8 @@ export default function MainPage() {
 
   return (
     <div>
-      <h1>MainPage</h1>
-      <button onClick={moveBoard}>Board</button>
+      <h1>메인 페이지</h1>
+      <button onClick={moveBoard}>보드</button>
       <BoardList data={data} />
     </div>
   );
