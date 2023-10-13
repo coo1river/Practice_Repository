@@ -1,47 +1,23 @@
-import React, { useState } from "react";
-import "./App.css";
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+import Router from "./router/Router";
 
-export default function App() {
-  const [title, setTitle] = useState([
-    "강남역 우동 맛집",
-    "역삼역 삼겹살 맛집",
-    "신사역 디저트 맛집",
-  ]);
+const GlobalStyle = createGlobalStyle`
+${reset}
+body{
+  background-color: lightgray;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 
-  const [like, setLike] = useState([0, 0, 0]);
-  const likePlus = (i) => {
-    const copy = [...like];
-    copy[i] += 1;
-    setLike(copy);
-  };
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&display=swap');
+`;
 
-  const Modal = () => {
-    title.map((x, i) => (
-      <div className="list" key={i}>
-        {x}
-      </div>
-    ));
-  };
-
+function App() {
   return (
-    <>
-      <div className="black-nav">
-        <h2>ReactBlog</h2>
-      </div>
-      {title.map((x, i) => (
-        <div className="list" key={i}>
-          <h4 onClick>
-            {x}
-            <button className="btn-like" onClick={() => likePlus(i)}>
-              💙
-            </button>
-            <span>{like[i]}</span>
-          </h4>
-          <p>글 내용</p>
-        </div>
-      ))}
-
-      <Modal />
-    </>
+    <div>
+      <GlobalStyle />
+      <Router />
+    </div>
   );
 }
+export default App;
