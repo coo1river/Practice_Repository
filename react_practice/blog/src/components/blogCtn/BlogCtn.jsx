@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { createGlobalStyle } from "styled-components";
-import { Title } from "./BlogCtn.syled";
+import { Title, Header } from "./BlogCtn.syled";
 
 export default function BlogCtn() {
   const [title, setTitle] = useState([
@@ -9,13 +8,28 @@ export default function BlogCtn() {
     "배틀그라운드",
   ]);
 
+  const [link, setLink] = useState([
+    "https://maplestory.nexon.com/Home/Main",
+    "https://www.leagueoflegends.com/ko-kr/",
+    "https://pubg.game.daum.net/pubg/index.daum",
+  ]);
+
+  function redirectToOtherWebsite(i) {
+    window.location.href = link[i];
+  }
+
   return (
     <>
-      <Title>
-        {title.map((x, i) => {
-          return <p key={i}>{x}</p>;
-        })}
-      </Title>
+      <Header>BLOG</Header>
+      {title.map((x, i) => {
+        return (
+          <Title>
+            <h2 key={i} onClick={() => redirectToOtherWebsite(i)}>
+              {x}
+            </h2>
+          </Title>
+        );
+      })}
     </>
   );
 }
