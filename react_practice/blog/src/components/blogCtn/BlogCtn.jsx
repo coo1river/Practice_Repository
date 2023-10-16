@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Title, Header } from "./BlogCtn.syled";
+import { Title, Header, Content, CtnBox } from "./BlogCtn.syled";
 
 export default function BlogCtn() {
-  const [title, setTitle] = useState([
-    "메이플스토리",
-    "리그오브레전드",
-    "배틀그라운드",
+  const [data, setData] = useState([
+    { title: "삼겹살 맛집", content: "삼겹살 맛있다" },
+    { title: "소곱창 맛집", content: "소곱창 너무 맛있어" },
+    { title: "졸리다", content: "너무 졸려" },
   ]);
 
   const [link, setLink] = useState([
@@ -21,13 +21,15 @@ export default function BlogCtn() {
   return (
     <>
       <Header>BLOG</Header>
-      {title.map((x, i) => {
+      {data.map((x, i) => {
         return (
-          <Title>
-            <h2 key={i} onClick={() => redirectToOtherWebsite(i)}>
-              {x}
-            </h2>
-          </Title>
+          <CtnBox>
+            <Title key={i} onClick={() => redirectToOtherWebsite(i)}>
+              {x.title}
+            </Title>
+            <hr />
+            <Content>{x.content}</Content>
+          </CtnBox>
         );
       })}
     </>

@@ -9,11 +9,21 @@ export const Header = styled.h1`
   padding: 20px;
 `;
 
-export const Title = styled.article`
+export const CtnBox = styled.article`
+  padding: 30px;
+  margin: 20px;
+  background-color: white;
+`;
+
+export const Title = styled.h2`
   font-size: 20px;
   font-weight: bold;
 
-  display: block;
-  padding: 20px;
+  margin-bottom: 10px;
+
   cursor: pointer;
+`;
+
+export const Content = styled.p`
+  font-size: 15px;
 `;
