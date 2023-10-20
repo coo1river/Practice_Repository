@@ -20,7 +20,7 @@ export default function BlogCtn() {
 
   return (
     <>
-      <Header>BLOG</Header>
+      <Header>Blog</Header>
       {data.map((x, i) => {
         return (
           <CtnBox>
