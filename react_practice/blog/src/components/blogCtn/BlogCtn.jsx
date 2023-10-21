@@ -32,6 +32,8 @@ export default function BlogCtn() {
           </CtnBox>
         );
       })}
+      <input type="text" />
+      <button>추가</button>
     </>
   );
 }
